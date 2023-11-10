@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "big-djancgo-roject-1"
+version = "0.1.0"
+description = ""
+authors = ["darkwolf <darkwolf1990janary@gmail.com>"]
+readme = "README.md"
+packages = [{include = "big_djancgo_roject_1"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = ">=4.1.0,<4.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
