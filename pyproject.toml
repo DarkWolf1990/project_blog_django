@@ -9,6 +9,8 @@ packages = [{include = "big_djancgo_roject_1"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 django = ">=4.1.0,<4.2.0"
+django-taggit = "3.0.0"
+markdown = "3.4.1"
 
 
 [build-system]
