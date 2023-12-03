@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .feeds import LatestPostsFeed
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -16,5 +17,6 @@ urlpatterns = [
                        views.post_share, name='post_share'),
                   path('<int:post_id>/comment/',
                        views.post_comment, name='post_comment'),
-                  path('tag/<slug:tag_slug>/', views.post_list, name='post_list_by_tag')
+                  path('tag/<slug:tag_slug>/', views.post_list, name='post_list_by_tag'),
+                  path('feed/', LatestPostsFeed(), name='post_feed'),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
